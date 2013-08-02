@@ -1,11 +1,8 @@
 {
   "name": "mocha-browserstack",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "A Mocha reporter that can be used to run Mocha tests automatically on BrowserStack",
-  "main": "mocha-browserstack.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
+  "main": "lib/mocha-browserstack.js",
   "repository": {
     "type": "git",
     "url": "git://github.com/bramstein/mocha-browserstack.git"
@@ -19,6 +16,5 @@
     "BrowserStack"
   ],
   "author": "Bram Stein <b.l.stein@gmail.com> (http://www.bramstein.com)",
-  "license": "BSD",
-  "gitHead": "a0e0d5adc8c12a18cbd0389619c779861d64e314"
+  "license": "BSD"
 }
