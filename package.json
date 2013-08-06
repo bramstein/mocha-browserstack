@@ -1,6 +1,6 @@
 {
   "name": "mocha-browserstack",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "A Mocha reporter that can be used to run Mocha tests automatically on BrowserStack",
   "main": "lib/mocha-browserstack.js",
   "repository": {
