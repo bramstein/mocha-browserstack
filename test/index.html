@@ -1,0 +1,22 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Mocha BrowserStack</title>
+    <link href="../node_modules/mocha/mocha.css" rel="stylesheet">
+  </head>
+  <body>
+    <div id="mocha"></div>
+    <script>CLOSURE_NO_DEPS = true;</script>
+    <script src="../node_modules/mocha/mocha.js"></script>
+    <script src="../node_modules/expect.js/expect.js"></script>
+    <script src="../lib/mocha-browserstack.js"></script>
+    <script>
+      mocha.ui('bdd').reporter(Mocha.BrowserStack);
+    </script>
+    <script src="./mocha-browserstack-test.js"></script>
+    <script>
+      mocha.run(); 
+    </script>
+  </body>
+</html>
