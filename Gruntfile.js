@@ -14,18 +14,15 @@ module.exports = function(grunt) {
         },
         exec: {
             browserstacktest: {
-                command: 'node_modules/browserstack-test/bin/browserstack-test -u $BROWSERSTACK_USERNAME -p $BROWSERSTACK_PASS -k $BROWSERSTACK_AUTHKEY -b test/browsers.json -t 60 http://localhost:9999/test-crossbrowser.html'
+                command: 'node_modules/browserstack-test/bin/browserstack-test -u $BROWSERSTACK_USERNAME -p $BROWSERSTACK_PASS -k $BROWSERSTACK_AUTHKEY -b browsers.json -t 60 http://localhost:9999/test-crossbrowser.html'
             }
         }
     });
 
     // Loading dependencies
-    for (var key in grunt.file.readJSON("package.json").devDependencies) {
-        if (key !== "grunt" && key.indexOf("grunt") === 0) {
-            grunt.loadNpmTasks(key);
-        }
-    }
-
+    grunt.loadNpmTasks('grunt-exec');
+    grunt.loadNpmTasks('browserstack-test');
+            
     grunt.registerTask('test-crossbrowser', ['connect', 'exec:browserstacktest']);
-    grunt.registerTask('default', ['test-crossbrowse']);
+    grunt.registerTask('default', ['test-crossbrowser']);
 };
