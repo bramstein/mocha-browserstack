@@ -12,6 +12,14 @@ Include the reporter in your HTML test page. The reporter extends the default HT
 
     <script src="node_modules/mocha-browserstack/lib/mocha-browserstack.js"></script>
 
+Configure mocha to use the BrowserStack reporter.
+
+    <script>
+        mocha.setup({
+            reporter: Mocha.BrowserStack
+        });
+    </script>
+
 ## License
 
 The mocha-browserstack code is licensed under the three-clause BSD license.
