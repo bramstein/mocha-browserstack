@@ -1,3 +1,8 @@
+# DEPRECATED
+
+This module has been deprecated and is no longer maintained.
+
+
 ## Automatic browser testing with Mocha and BrowserStack
 
 This Mocha reporter allows you to run your unit tests automatically on one or multiple BrowserStack instances.
